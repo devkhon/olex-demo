@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLX Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #032c2f;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 24px;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #00e3e3;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #00e3e3;
+        }
+        .language-links {
+            display: flex;
+            gap: 10px;
+        }
+        .navbar-right {
+            display: flex;
+            align-items: center;
+        }
+        .icon {
+            font-size: 18px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        .icon:hover {
+            opacity: 0.7;
+        }
+        .profile {
+            margin-left: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        .post-ad {
+            background-color: white;
+            color: black;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s;
+            margin-left: 15px;
+        }
+        .post-ad:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <div class="logo">OLX</div>
+            <div class="nav-links">
+                <div class="language-links">
+                    <a href="#">Uz</a>
+                    <a href="#">Ру</a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <span class="icon">❤️</span>
+            <span class="icon">🔔</span>
+            <a href="{% url 'login' %}" class="profile">Profile</a>
+            <a href="#" class="post-ad">E'lon berish</a>
+        </div>
+    </div>
+</body>
+</html>
